@@ -28,3 +28,15 @@ STRING=${2}
 
 echo "引数1は${NUM}"
 echo "引数2は${STRING}"
+
+# 配列
+ARRAY=(1 2 3 4 5)
+
+# 先頭を出力
+echo $ARRAY
+
+# 任意の配列番号を参照
+echo "${ARRAY[3]}"
+
+# 配列の全ての要素を出力
+echo "${ARRAY[@]}"
