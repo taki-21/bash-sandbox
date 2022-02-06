@@ -53,3 +53,17 @@ for i in ${ARRAY[@]}
 do
   echo $i
 done
+
+# while文
+count=0
+
+while [ $count -lt 5 ]
+do
+ count=$((++count))
+ echo $count
+done
+
+while read line
+do
+  echo $line
+done < test.txt
