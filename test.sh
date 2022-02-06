@@ -40,3 +40,16 @@ echo "${ARRAY[3]}"
 
 # 配列の全ての要素を出力
 echo "${ARRAY[@]}"
+
+# for文
+for i in `seq 0 5`
+do
+  echo $i
+done
+
+ARRAY=(January February March April May June July August September October November December)
+
+for i in ${ARRAY[@]}
+do
+  echo $i
+done
