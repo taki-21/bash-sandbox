@@ -67,3 +67,37 @@ while read line
 do
   echo $line
 done < test.txt
+
+# if文
+NUMS=(1 2 3 4 5 6 7 8 9 10)
+STRINGS=(January February March April May June July August September October November December)
+
+echo "===========TEST1==========="
+for num in ${NUMS[@]}
+do
+  if [ $num -gt 5 ]; then
+    echo "$numは5より大きいです。"
+  else
+    echo "$numは5以下です。"
+  fi
+done
+echo "===========TEST2==========="
+for num in ${NUMS[@]}
+do
+  if [ $num -le 5 ]; then
+    echo "$numは5以下です。"
+  else
+    echo "$numは5より大きいです。"
+  fi
+done
+echo "===========TEST3==========="
+for str in ${STRINGS[@]}
+do
+  if [ $str = "January" ];then
+    echo "$str は1月です"
+    touch /tmp/jaunary.txt
+  else
+    echo "$str は1月ではありません。"
+  fi
+done
+echo "==========================="
